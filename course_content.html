@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Brainify - Учебные материалы</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Brainify</h1>
+        <nav>
+            <a href="index.html">Главная</a>
+            <a href="courses.html">Курсы</a>
+            <a href="feedback.html">Обратная связь</a>
+        </nav>
+    </header>
+
+    <main>
+        <section id="course-content">
+            <h2>Учебный материал</h2>
+
+            <div class="lesson">
+                <h3>Урок 1: Введение в HTML</h3>
+                <p>Здесь будет текст урока и/или ссылка на видео.</p>
+                <a href="#">Скачать материалы</a>
+            </div>
+
+            <div class="lesson">
+                <h3>Урок 2: Структура HTML документа</h3>
+                <p>Здесь будет текст урока и/или ссылка на видео.</p>
+                <a href="#">Скачать материалы</a>
+            </div>
+            <!-- Другие уроки -->
+        </section>
+
+        <section id="test">
+            <h2>Тест по пройденному материалу</h2>
+            <form id="testForm">
+                <p>Вопрос 1: Что такое HTML?</p>
+                <input type="radio" id="q1a" name="q1" value="a">
+                <label for="q1a">Язык программирования</label><br>
+                <input type="radio" id="q1b" name="q1" value="b">
+                <label for="q1b">Язык разметки</label><br>
+                <input type="radio" id="q1c" name="q1" value="c">
+                <label for="q1c">База данных</label><br><br>
+
+                <p>Вопрос 2: Какой тег используется для заголовка первого уровня?</p>
+                <input type="radio" id="q2a" name="q2" value="a">
+                <label for="q2a">&lt;h1&gt;</label><br>
+                <input type="radio" id="q2b" name="q2" value="b">
+                <label for="q2b">&lt;h6&gt;</label><br>
+                <input type="radio" id="q2c" name="q2" value="c">
+                <label for="q2c">&lt;header&gt;</label><br><br>
+
+                <button type="submit">Проверить ответы</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2023 Brainify</p>
+    </footer>
+
+    <script>
+        document.getElementById('testForm').addEventListener('submit', function(event) {
+            event.preventDefault(); // Предотвращаем отправку формы по умолчанию
+
+            // Здесь нужно добавить логику проверки ответов и вывода результата
+            // Например, сравнить выбранные ответы с правильными и посчитать количество правильных ответов
+
+            // Для примера, просто выведем сообщение с результатом
+            alert('Ваш результат:  (Реализация логики проверки ответов требует JavaScript и, возможно, серверной части)');
+        });
+    </script>
+</body>
+</html>

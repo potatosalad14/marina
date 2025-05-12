@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Brainify - Планирование курса</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Brainify</h1>
+        <nav>
+            <a href="index.html">Главная</a>
+            <a href="courses.html">Курсы</a>
+            <a href="feedback.html">Обратная связь</a>
+        </nav>
+    </header>
+
+    <main>
+        <section id="course-planning">
+            <h2>Планирование курса</h2>
+            <p>Оцените свои навыки и предпочтения, чтобы мы могли составить идеальный курс для вас.</p>
+
+            <form id="planningForm">
+                <label for="experience">Ваш опыт в данной области:</label>
+                <select id="experience" name="experience">
+                    <option value="beginner">Новичок</option>
+                    <option value="intermediate">Средний уровень</option>
+                    <option value="advanced">Продвинутый уровень</option>
+                </select><br><br>
+
+                <label for="time">Сколько времени в неделю вы готовы уделять обучению?</label>
+                <input type="number" id="time" name="time" min="1" max="20" value="5"><br><br>
+
+                <label for="goals">Ваши цели обучения:</label>
+                <textarea id="goals" name="goals" rows="4" cols="50"></textarea><br><br>
+
+                <button type="submit">Составить курс</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2023 Brainify</p>
+    </footer>
+
+    <script>
+        document.getElementById('planningForm').addEventListener('submit', function(event) {
+            event.preventDefault(); // Предотвращаем отправку формы по умолчанию
+
+            // Здесь можно добавить код для обработки данных формы и составления индивидуального плана курса
+            // Например, отправить данные на сервер для анализа и получения рекомендаций
+
+            // Получаем значения полей формы
+            var experience = document.getElementById('experience').value;
+            var time = document.getElementById('time').value;
+            var goals = document.getElementById('goals').value;
+
+            // Для примера, просто перенаправляем пользователя на страницу курса с контентом
+            window.location.href = 'course_content.html';
+        });
+    </script>
+</body>
+</html>
